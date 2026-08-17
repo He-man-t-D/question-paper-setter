@@ -21,7 +21,7 @@ client = DocumentIntelligenceClient(
 
 result = dict()
 
-with open(r'D:\DataScienceClass\Projects\question-paper-setter\data\raw\gmail.pdf', "rb") as f:
+with open(r'D:\DataScienceClass\Projects\question-paper-setter\data\raw\tables.pdf', "rb") as f:
     poller = client.begin_analyze_document(
         "prebuilt-layout",
         body=f
@@ -32,7 +32,7 @@ with open(r'D:\DataScienceClass\Projects\question-paper-setter\data\raw\gmail.pd
     data = result.as_dict()
 
     with open(
-        r"D:\DataScienceClass\Projects\question-paper-setter\data\processed\sample_document.json",
+        r"D:\DataScienceClass\Projects\question-paper-setter\data\processed\tables.json",
         "w",
         encoding="utf-8"
     ) as f:
